@@ -3,12 +3,14 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"log"
 	"os"
 )
 
 func main() {
 	fmt.Print("Input score: ")
 	reader := bufio.NewReader(os.Stdin)
-	inputScore, _ := reader.ReadString('\n') // Ignore the error return value with the brank
+	inputScore, err := reader.ReadString('\n') //option2
+	log.Fatal(err)
 	fmt.Println(inputScore)
 }
