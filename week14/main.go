@@ -3,6 +3,7 @@ package main
 import "fmt"
 
 func main() {
+
 	games := map[int]string{
 		456: "성기훈",
 		218: "박해수",
@@ -12,6 +13,9 @@ func main() {
 		101: "아이오아이",
 	}
 	//fmt.Println(games[100])
+	//name, ok := games[100]
+	name, ok := games[101]
+	fmt.Println(name, ok)
 	for _, v := range games {
 		fmt.Println(v)
 	}
